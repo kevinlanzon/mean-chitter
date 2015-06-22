@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Chitter</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+      <script src="javascripts/chitterApp.js"></script>
+  </head>
+  <body ng-app="chitterApp">
+    <div id='main' ng-controller="mainController">
+      <form>
+        <input type="text" placeholder="Your name" />
+        <textarea required maxlength="200" rows="3" placeholder="Say something"></textarea>
+        <input class="button" type="submit" value="Chirp!" />
+      </form>
+      <div id="post-stream">
+        <h4>Chitter Feed</h4>
+              <!--to be populated by Angular-->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
