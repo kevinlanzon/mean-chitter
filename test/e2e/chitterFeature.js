@@ -1,10 +1,7 @@
 describe('Homepage', function() {
-
-  beforeEach(function() {
+  it('should have a title', function() {
     browser.get('/app/main.html');
-  });
 
-  it('has a title', function() {
     expect(browser.getTitle()).toEqual('Chitter');
   });
 });
