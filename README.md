@@ -10,8 +10,8 @@ Using the whole MEAN stack -- Mongo, Express, Angular, and Node -- to build out 
 - Model and store data in MongoDB
 - Build an API using Express
 
-Technologies used (so far)
-========
+###Technologies used (so far)
+
 - Angular.js
 - HTML
 - CSS
