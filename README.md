@@ -9,3 +9,10 @@ Using the whole MEAN stack -- Mongo, Express, Angular, and Node -- to build out 
 - Run a server-side application with authentication services on Node.js
 - Model and store data in MongoDB
 - Build an API using Express
+
+Technologies used (so far)
+========
+- Angular.js
+- HTML
+- CSS
+- Protractor for e2e testing
