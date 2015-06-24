@@ -16,3 +16,12 @@ Using the whole MEAN stack -- Mongo, Express, Angular, and Node -- to build out 
 - HTML
 - CSS
 - Protractor for e2e testing
+
+###How to run tests
+
+```sh
+$ cd mean-chitter
+$ webdriver-manager update
+$ lserver
+$ protractor conf.js
+```
