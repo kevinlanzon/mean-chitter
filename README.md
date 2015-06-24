@@ -16,6 +16,7 @@ Using the whole MEAN stack -- Mongo, Express, Angular, and Node -- to build out 
 - HTML
 - CSS
 - Protractor for e2e testing
+- local-server (static web server for testing)
 
 ###How to run tests
 
