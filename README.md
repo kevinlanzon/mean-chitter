@@ -27,6 +27,13 @@ $ npm install
 $ Run bower install
 ```
 
+###How to run
+
+```sh
+$ lserver
+Visit http://localhost:8000/app/main.html
+```
+
 ###How to run tests
 
 ```sh
