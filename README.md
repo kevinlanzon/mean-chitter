@@ -13,18 +13,19 @@ Using the whole MEAN stack -- Mongo, Express, Angular, and Node -- to build out 
 ###Technologies used (so far)
 
 - Angular.js
+- Express.js
 - HTML
 - CSS
 - Protractor for e2e testing
 - local-server (static web server for testing)
 
-Setup
------
-- run git clone git@github.com:kevinlanzon/mean-chitter.git
-- Make sure you have node.js installed (run 'node -v')
-- Make sure you have bower installed (run 'bower -v')
-- Run npm install
-- Run bower install
+###Setup
+
+```sh
+$ git clone git@github.com:kevinlanzon/mean-chitter.git
+$ npm install
+$ Run bower install
+```
 
 ###How to run tests
 
