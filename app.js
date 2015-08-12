@@ -6,11 +6,13 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var passport = require('passport');
+// Initialize mongoose schemas
+require('./models/models.js');
 var api = require('./routes/api');
 var authenticate = require('./routes/authenticate')(passport);
-var mongoose = require ('mongoose');
+var mongoose = require('mongoose');
 // connect to mongodb
-mongoose.connect('/mongodb://localhost:27017/chitter-test');
+mongoose.connect('mongodb://localhost:27017/test-chitter');
 
 var app = express();
 
@@ -41,7 +43,7 @@ app.use(function(req, res, next) {
     next(err);
 });
 
-//// Initialize Passport
+// Initialize Passport
 var initPassport = require('./passport-init');
 initPassport(passport);
 
