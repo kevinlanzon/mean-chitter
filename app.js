@@ -8,6 +8,9 @@ var session = require('express-session');
 var passport = require('passport');
 var api = require('./routes/api');
 var authenticate = require('./routes/authenticate')(passport);
+var mongoose = require ('mongoose');
+// connect to mongodb
+mongoose.connect('/mongodb://localhost:27017/chitter-test');
 
 var app = express();
 
