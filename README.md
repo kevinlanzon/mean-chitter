@@ -5,36 +5,44 @@ Building Chitter, a MEAN Twitter Clone
 
 Using the whole MEAN stack -- Mongo, Express, Angular, and Node -- to build out a simple but robust Twitter clone called Chitter.
 
-- A dynamic front end by using the Angular.js front end framework
-- Run a server-side application with authentication services on Node.js
-- Model and store data in MongoDB
-- Build an API using Express
+- [x] A dynamic front end by using the Angular.js front end framework
+- [x] Run a server-side application with authentication services on Node.js
+- [x] Model and store data in MongoDB
+- [x] Build an API using Express
 
-###Technologies used (so far)
+Screenshot
+---
+<div align="center">
+    <img width="105%" src="/public/images/screen-shot.png">
+</div>
+
+###Technologies used
 
 - MongoDB
 - Express.js
 - Angular.js
 - Node.js
+- Mongoose
+- Passport
+- Protractor for e2e testing
+- Mocha for unit testing
 - HTML
 - CSS
 - Bootstrap
-- Protractor for e2e testing
-- local-server (static web server for testing)
+
 
 ###Setup
 
 ```sh
 $ git clone git@github.com:kevinlanzon/mean-chitter.git
 $ npm install
-$ Run bower install
 ```
 
 ###How to run
 
 ```sh
-$ lserver
-Visit http://localhost:8000/app/main.html
+$ npm start
+Visit http://localhost:3000
 ```
 
 ###How to run tests
@@ -42,6 +50,6 @@ Visit http://localhost:8000/app/main.html
 ```sh
 $ cd mean-chitter
 $ webdriver-manager update
-$ lserver
+$ npm start
 $ protractor conf.js
 ```

@@ -1,8 +1,8 @@
 <div class="clearfix">
-  <form ng-Submit="post()">
-    <input required type="text" class="form-control" id="name" placeholder="Your name" ng-model="newPost.created_by" />
-    <textarea required class="form-control" id="message" maxlength="150" rows="3" placeholder="Say something" ng-model="newPost.text"></textarea>
-    <input class="btn submit-btn pull-right" id="submit-chirp" type="submit" value="Chirp!" />
+  <form ng-Submit="post()" ng-show="authenticated">
+    <h4>@{{current_user}}</h4>
+    <textarea id="message" required class="form-control" maxlength="200" rows="3" placeholder="What's happening?" ng-model="newPost.text"></textarea>
+    <input class="btn submit-btn pull-right" type="submit" value="Cheep!" />
   </form>
   <div id="post-stream">
     <h4>Chitter Feed</h4>
