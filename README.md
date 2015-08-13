@@ -12,10 +12,13 @@ Using the whole MEAN stack -- Mongo, Express, Angular, and Node -- to build out 
 
 ###Technologies used (so far)
 
-- Angular.js
+- MongoDB
 - Express.js
+- Angular.js
+- Node.js
 - HTML
 - CSS
+- Bootstrap
 - Protractor for e2e testing
 - local-server (static web server for testing)
 
