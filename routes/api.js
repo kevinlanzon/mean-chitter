@@ -10,11 +10,11 @@ function isAuthenticated (req, res, next) {
   // request and response objects
 
   //allow all get request methods
-  if(req.method === "GET"){
-      return next();
+  if(req.method === "GET") {
+    return next();
   }
-  if (req.isAuthenticated()){
-      return next();
+  if (req.isAuthenticated()) {
+    return next();
   }
 
   // if the user is not authenticated then redirect them to the login page
@@ -26,23 +26,23 @@ router.use('/posts', isAuthenticated);
 
 router.route('/posts')
   //creates a new post
-  .post(function(req, res){
+  .post(function(req, res) {
 
-      var post = new Post();
-      post.text = req.body.text;
-      post.created_by = req.body.created_by;
-      post.save(function(err, post) {
-        if (err){
-            return res.send(500, err);
-        }
-        return res.json(post);
-      });
-    })
+    var post = new Post();
+    post.text = req.body.text;
+    post.created_by = req.body.created_by;
+    post.save(function(err, post) {
+      if (err){
+        return res.send(500, err);
+      }
+      return res.json(post);
+    });
+  })
   //gets all posts
   .get(function(req, res){
-    Post.find(function(err, posts){
+    Post.find(function(err, posts) {
       if(err){
-          return res.send(500, err);
+        return res.send(500, err);
       }
       return res.send(posts);
     });
@@ -52,24 +52,24 @@ router.route('/posts')
 router.route('/posts/:id')
   //gets specified post
   .get(function(req, res){
-    Post.findById(req.params.id, function(err, post){
+    Post.findById(req.params.id, function(err, post) {
       if(err)
-          res.send(err);
+        res.send(err);
       res.json(post);
     });
   })
   //updates specified post
   .put(function(req, res){
-    Post.findById(req.params.id, function(err, post){
+    Post.findById(req.params.id, function(err, post) {
       if(err)
-          res.send(err);
+        res.send(err);
 
       post.created_by = req.body.created_by;
       post.text = req.body.text;
 
       post.save(function(err, post){
         if(err)
-            res.send(err);
+          res.send(err);
 
         res.json(post);
       });
@@ -81,7 +81,7 @@ router.route('/posts/:id')
       _id: req.params.id
     }, function(err) {
       if (err)
-          res.send(err);
+        res.send(err);
       res.json("deleted :(");
     });
   });
