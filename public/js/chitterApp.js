@@ -1,4 +1,13 @@
-var app = angular.module('chitterApp', ['ngRoute']);
+var app = angular.module('chitterApp', ['ngRoute', 'ngResource']).run(function($http, $rootScope) {
+  $rootScope.authenticated = false;
+  $rootScope.current_user = '';
+
+  $rootScope.signout = function(){
+    $http.get('auth/signout');
+    $rootScope.authenticated = false;
+    $rootScope.current_user = '';
+  };
+});
 
 app.config(function($routeProvider){
   $routeProvider
@@ -13,8 +22,8 @@ app.config(function($routeProvider){
       controller: 'authController'
     })
     //the signup display
-    .when('/register', {
-      templateUrl: 'register.html',
+    .when('/signup', {
+      templateUrl: 'signup.html',
       controller: 'authController'
     });
 });
@@ -30,17 +39,31 @@ app.controller('mainController', function($scope) {
   };
 });
 
-app.controller('authController', function($scope) {
+app.controller('authController', function($scope, $http, $rootScope, $location){
   $scope.user = {username: '', password: ''};
   $scope.error_message = '';
 
-  $scope.login = function() {
-    //placeholder until authentication is implemented
-    $scope.error_message = 'login request for ' + $scope.user.username;
+  $scope.login = function(){
+    $http.post('/auth/login', $scope.user).success(function(data){
+      if(data.state == 'success'){
+        $rootScope.authenticated = true;
+        $rootScope.current_user = data.user.username;
+        $location.path('/');
+      } else {
+        $scope.error_message = data.message;
+      }
+    });
   };
 
-  $scope.register = function() {
-    //placeholder until authentication is implemented
-    $scope.error_message = 'registeration request for ' + $scope.user.username;
+  $scope.register = function(){
+    $http.post('/auth/signup', $scope.user).success(function(data){
+      if(data.state == 'success'){
+        $rootScope.authenticated = true;
+        $rootScope.current_user = data.user.username;
+        $location.path('/');
+      } else {
+        $scope.error_message = data.message;
+      }
+    });
   };
 });

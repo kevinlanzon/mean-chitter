@@ -1,7 +1,7 @@
 describe('Homepage', function() {
 
   beforeEach(function() {
-    browser.get('/main.html');
+    browser.get('/');
     addName = element(by.id('name'));
     addMessage = element(by.id('message'));
     submitMessage = element(by.id('submit-chirp'));
