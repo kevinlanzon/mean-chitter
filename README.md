@@ -41,6 +41,7 @@ $ npm install
 ###How to run
 
 ```sh
+$ mongod
 $ npm start
 Visit http://localhost:3000
 ```
