@@ -13,7 +13,7 @@ var api = require('./routes/api');
 var authenticate = require('./routes/authenticate')(passport);
 var mongoose = require('mongoose');
 // connect to mongodb
-mongoose.connect('mongodb://localhost:27017/test-chitter');
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost:27017/test-chitter');
 
 var app = express();
 
