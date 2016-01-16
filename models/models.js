@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-//post schema to represent our entries when a user 'Chirps' a message
+//post schema to represent entries when a user 'Chirps' a message
 var postSchema = new mongoose.Schema({
   created_by: String,   //should be changed to ObjectId, ref "User"
   created_at: {type: Date, default: Date.now},

@@ -1,7 +1,5 @@
-Building Chitter, a MEAN Twitter Clone
+Chitter - A MEAN Twitter Clone
 -------------
-
-🚧 IN PROGRESS 🚧
 
 Using the whole MEAN stack -- Mongo, Express, Angular, and Node -- to build out a simple but robust Twitter clone called Chitter.
 
@@ -25,7 +23,7 @@ Screenshot
 - Mongoose
 - Passport
 - Protractor for e2e testing
-- Mocha for unit testing
+- Jasmine-Node unit testing
 - HTML
 - CSS
 - Bootstrap
