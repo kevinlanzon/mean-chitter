@@ -14,6 +14,10 @@ Screenshot
     <img width="105%" src="/public/images/screen-shot.png">
 </div>
 
+View live
+-----
+[Chitter](https://lanzon-chitter.herokuapp.com/)
+
 ###Technologies used
 
 - MongoDB
