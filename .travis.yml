@@ -7,5 +7,6 @@ before_install:
 - "webdriver-manager update"
 - "npm start"
 - "protractor conf.js"
+- "echo \"node_modules/jasmine-node/bin/jasmine-node test/unit/ --verbose"
 script:
 - "npm test"
