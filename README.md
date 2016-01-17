@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/kevinlanzon/mean-chitter/badges/gpa.svg)](https://codeclimate.com/github/kevinlanzon/mean-chitter)
+
 Chitter - A MEAN Twitter Clone
 -------------
 
